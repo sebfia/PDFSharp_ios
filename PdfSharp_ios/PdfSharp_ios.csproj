@@ -1,0 +1,975 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1841E26-F6F2-474A-8040-4E97DDF3D822}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PdfSharp_ios</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>PdfSharp_ios</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;__MOBILE__;SILVERLIGHT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>__IOS__;__MOBILE__;SILVERLIGHT;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\BarCode.cs">
+      <Link>PdfSharp.Drawing.BarCodes\BarCode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\BarCodeRenderInfo.cs">
+      <Link>PdfSharp.Drawing.BarCodes\BarCodeRenderInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\BcgSR.cs">
+      <Link>PdfSharp.Drawing.BarCodes\BcgSR.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\Code2of5Interleaved.cs">
+      <Link>PdfSharp.Drawing.BarCodes\Code2of5Interleaved.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\Code3of9Standard.cs">
+      <Link>PdfSharp.Drawing.BarCodes\Code3of9Standard.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\CodeBase.cs">
+      <Link>PdfSharp.Drawing.BarCodes\CodeBase.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\CodeDataMatrix.cs">
+      <Link>PdfSharp.Drawing.BarCodes\CodeDataMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\CodeOmr.cs">
+      <Link>PdfSharp.Drawing.BarCodes\CodeOmr.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\DataMatrixImage.cs">
+      <Link>PdfSharp.Drawing.BarCodes\DataMatrixImage.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\AnchorType.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\AnchorType.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\CodeDirection.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\CodeDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\CodeType.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\CodeType.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\DataMatrixEncoding.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\DataMatrixEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\MarkDistance.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\MarkDistance.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\enums\TextLocation.cs">
+      <Link>PdfSharp.Drawing.BarCodes\enums\TextLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\MatrixCode.cs">
+      <Link>PdfSharp.Drawing.BarCodes\MatrixCode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\OmrData.cs">
+      <Link>PdfSharp.Drawing.BarCodes\OmrData.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.BarCodes\ThickThinBarcodeRenderer.cs">
+      <Link>PdfSharp.Drawing.BarCodes\ThickThinBarcodeRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Layout\enums\XParagraphAlignment.cs">
+      <Link>PdfSharp.Drawing.Layout\enums\XParagraphAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Layout\XTextFormatter.cs">
+      <Link>PdfSharp.Drawing.Layout\XTextFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Pdf\enums\DirtyFlags.cs">
+      <Link>PdfSharp.Drawing.Pdf\enums\DirtyFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Pdf\enums\StreamMode.cs">
+      <Link>PdfSharp.Drawing.Pdf\enums\StreamMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Pdf\PdfGraphicsState.cs">
+      <Link>PdfSharp.Drawing.Pdf\PdfGraphicsState.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Pdf\XGraphicsPdfRenderer.cs">
+      <Link>PdfSharp.Drawing.Pdf\XGraphicsPdfRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing.Shapes\Shape.cs">
+      <Link>PdfSharp.Drawing.Shapes\Shape.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\PathStart.cs">
+      <Link>PdfSharp.Drawing\enums\PathStart.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XColorSpace.cs">
+      <Link>PdfSharp.Drawing\enums\XColorSpace.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XCombineMode.cs">
+      <Link>PdfSharp.Drawing\enums\XCombineMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XDashStyle.cs">
+      <Link>PdfSharp.Drawing\enums\XDashStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XFillMode.cs">
+      <Link>PdfSharp.Drawing\enums\XFillMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XFontStyle.cs">
+      <Link>PdfSharp.Drawing\enums\XFontStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XGraphicRenderTarget.cs">
+      <Link>PdfSharp.Drawing\enums\XGraphicRenderTarget.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XGraphicsPathItemType.cs">
+      <Link>PdfSharp.Drawing\enums\XGraphicsPathItemType.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XGraphicsPdfPageOptions.cs">
+      <Link>PdfSharp.Drawing\enums\XGraphicsPdfPageOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XGraphicsUnit.cs">
+      <Link>PdfSharp.Drawing\enums\XGraphicsUnit.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XKnownColor.cs">
+      <Link>PdfSharp.Drawing\enums\XKnownColor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XLineAlignment.cs">
+      <Link>PdfSharp.Drawing\enums\XLineAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XLinearGradientMode.cs">
+      <Link>PdfSharp.Drawing\enums\XLinearGradientMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XLineCap.cs">
+      <Link>PdfSharp.Drawing\enums\XLineCap.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XLineJoin.cs">
+      <Link>PdfSharp.Drawing\enums\XLineJoin.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XMatrixOrder.cs">
+      <Link>PdfSharp.Drawing\enums\XMatrixOrder.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XPageDirection.cs">
+      <Link>PdfSharp.Drawing\enums\XPageDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XSmoothingMode.cs">
+      <Link>PdfSharp.Drawing\enums\XSmoothingMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\enums\XStringAlignment.cs">
+      <Link>PdfSharp.Drawing\enums\XStringAlignment.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\FontHelper.cs">
+      <Link>PdfSharp.Drawing\FontHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\GeometryHelper.cs">
+      <Link>PdfSharp.Drawing\GeometryHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\GraphicsStateStack.cs">
+      <Link>PdfSharp.Drawing\GraphicsStateStack.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\ImageHelper.cs">
+      <Link>PdfSharp.Drawing\ImageHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\InternalGraphicsState.cs">
+      <Link>PdfSharp.Drawing\InternalGraphicsState.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\IXGraphicsRenderer.cs">
+      <Link>PdfSharp.Drawing\IXGraphicsRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\PdfFontOptions.cs">
+      <Link>PdfSharp.Drawing\PdfFontOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XBrush.cs">
+      <Link>PdfSharp.Drawing\XBrush.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XBrushes.cs">
+      <Link>PdfSharp.Drawing\XBrushes.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XColor.cs">
+      <Link>PdfSharp.Drawing\XColor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XColorResourceManager.cs">
+      <Link>PdfSharp.Drawing\XColorResourceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XColors.cs">
+      <Link>PdfSharp.Drawing\XColors.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XConvert.cs">
+      <Link>PdfSharp.Drawing\XConvert.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFont.cs">
+      <Link>PdfSharp.Drawing\XFont.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFontFamily.cs">
+      <Link>PdfSharp.Drawing\XFontFamily.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFontMetrics.cs">
+      <Link>PdfSharp.Drawing\XFontMetrics.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFontStretch.cs">
+      <Link>PdfSharp.Drawing\XFontStretch.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFontWeight.cs">
+      <Link>PdfSharp.Drawing\XFontWeight.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XFontWeights.cs">
+      <Link>PdfSharp.Drawing\XFontWeights.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XForm.cs">
+      <Link>PdfSharp.Drawing\XForm.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGlyphTypeface.cs">
+      <Link>PdfSharp.Drawing\XGlyphTypeface.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphics.cs">
+      <Link>PdfSharp.Drawing\XGraphics.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphicsContainer.cs">
+      <Link>PdfSharp.Drawing\XGraphicsContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphicsPath.cs">
+      <Link>PdfSharp.Drawing\XGraphicsPath.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphicsPathInternals.cs">
+      <Link>PdfSharp.Drawing\XGraphicsPathInternals.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphicsPathItem.cs">
+      <Link>PdfSharp.Drawing\XGraphicsPathItem.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XGraphicsState.cs">
+      <Link>PdfSharp.Drawing\XGraphicsState.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XImage.cs">
+      <Link>PdfSharp.Drawing\XImage.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XImageFormat.cs">
+      <Link>PdfSharp.Drawing\XImageFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XKnownColorTable.cs">
+      <Link>PdfSharp.Drawing\XKnownColorTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XLinearGradientBrush.cs">
+      <Link>PdfSharp.Drawing\XLinearGradientBrush.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XMatrix.cs">
+      <Link>PdfSharp.Drawing\XMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XPdfForm.cs">
+      <Link>PdfSharp.Drawing\XPdfForm.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XPen.cs">
+      <Link>PdfSharp.Drawing\XPen.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XPens.cs">
+      <Link>PdfSharp.Drawing\XPens.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XPoint.cs">
+      <Link>PdfSharp.Drawing\XPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XPrivateFontCollection.cs">
+      <Link>PdfSharp.Drawing\XPrivateFontCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XRect.cs">
+      <Link>PdfSharp.Drawing\XRect.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XSize.cs">
+      <Link>PdfSharp.Drawing\XSize.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XSolidBrush.cs">
+      <Link>PdfSharp.Drawing\XSolidBrush.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XStringFormat.cs">
+      <Link>PdfSharp.Drawing\XStringFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XStringFormats.cs">
+      <Link>PdfSharp.Drawing\XStringFormats.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XTypeFace.cs">
+      <Link>PdfSharp.Drawing\XTypeFace.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XUnit.cs">
+      <Link>PdfSharp.Drawing\XUnit.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Drawing\XVector.cs">
+      <Link>PdfSharp.Drawing\XVector.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\ExternalHelper.cs">
+      <Link>PdfSharp.Fonts.OpenType\ExternalHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\FontData.cs">
+      <Link>PdfSharp.Fonts.OpenType\FontData.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\FontDataStock.cs">
+      <Link>PdfSharp.Fonts.OpenType\FontDataStock.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\GenericFontTable.cs">
+      <Link>PdfSharp.Fonts.OpenType\GenericFontTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\GlyphDataTable.cs">
+      <Link>PdfSharp.Fonts.OpenType\GlyphDataTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\IndexToLocationTable.cs">
+      <Link>PdfSharp.Fonts.OpenType\IndexToLocationTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\IRefFontTable.cs">
+      <Link>PdfSharp.Fonts.OpenType\IRefFontTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\OpenTypeDescriptor.cs">
+      <Link>PdfSharp.Fonts.OpenType\OpenTypeDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\OpenTypeFontTable.cs">
+      <Link>PdfSharp.Fonts.OpenType\OpenTypeFontTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\OpenTypeFontWriter.cs">
+      <Link>PdfSharp.Fonts.OpenType\OpenTypeFontWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\OpenTypeStructures.cs">
+      <Link>PdfSharp.Fonts.OpenType\OpenTypeStructures.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\TableDirectoryEntry.cs">
+      <Link>PdfSharp.Fonts.OpenType\TableDirectoryEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\AdobeGlyphList20.cs">
+      <Link>PdfSharp.Fonts\AdobeGlyphList20.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\AdobeGlyphListForNewFonts.cs">
+      <Link>PdfSharp.Fonts\AdobeGlyphListForNewFonts.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\CMapInfo.cs">
+      <Link>PdfSharp.Fonts\CMapInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\FontDescriptor.cs">
+      <Link>PdfSharp.Fonts\FontDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\FontDescriptorStock.cs">
+      <Link>PdfSharp.Fonts\FontDescriptorStock.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts\FontWriter.cs">
+      <Link>PdfSharp.Fonts\FontWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\Calc.cs">
+      <Link>PdfSharp.Internal\Calc.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\ColorHelper.cs">
+      <Link>PdfSharp.Internal\ColorHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\DoubleUtil.cs">
+      <Link>PdfSharp.Internal\DoubleUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\FontHelper14.cs">
+      <Link>PdfSharp.Internal\FontHelper14.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\NativeMethods.cs">
+      <Link>PdfSharp.Internal\NativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Internal\TokenizerHelper.cs">
+      <Link>PdfSharp.Internal\TokenizerHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\IContentStream.cs">
+      <Link>PdfSharp.Pdf.Advanced\IContentStream.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfCatalog.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfCatalog.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfCIDFont.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfCIDFont.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfContent.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfContent.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfContents.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfContents.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfDictionaryWithContentStream.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfDictionaryWithContentStream.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfExtGState.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfExtGState.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfExtGStateTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfExtGStateTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfFont.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfFont.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfFontDescriptor.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfFontDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfFontTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfFontTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfFormXObject.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfFormXObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfFormXObjectTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfFormXObjectTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfGroupAttributes.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfGroupAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfImage.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfImage.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfImage.FaxEncode.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfImage.FaxEncode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfImageTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfImageTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfImportedObjectTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfImportedObjectTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfInternals.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfInternals.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfObjectInternals.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfObjectInternals.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfPageInheritableObjects.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfPageInheritableObjects.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfReference.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfReference.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfResourceMap.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfResourceMap.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfResources.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfResources.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfResourceTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfResourceTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfShading.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfShading.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfShadingPattern.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfShadingPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfShadingTable.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfShadingTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfSoftMask.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfSoftMask.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfTilingPattern.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfTilingPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfToUnicodeMap.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfToUnicodeMap.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfTrailer.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfTrailer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfTransparencyGroupAttributes.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfTransparencyGroupAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfTrueTypeFont.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfTrueTypeFont.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfType0Font.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfType0Font.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfType1Font.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfType1Font.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Advanced\PdfXObject.cs">
+      <Link>PdfSharp.Pdf.Advanced\PdfXObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfAnnotations.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfAnnotations.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfGenericAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfGenericAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfLinkAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfLinkAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfRubberStampAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfRubberStampAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfTextAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfTextAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\PdfWidgetAnnotation.cs">
+      <Link>PdfSharp.Pdf.Annotations\PdfWidgetAnnotation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\ASCII85Decode.cs">
+      <Link>PdfSharp.Pdf.Filters\ASCII85Decode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\ASCIIHexDecode.cs">
+      <Link>PdfSharp.Pdf.Filters\ASCIIHexDecode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\Filter.cs">
+      <Link>PdfSharp.Pdf.Filters\Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\Filtering.cs">
+      <Link>PdfSharp.Pdf.Filters\Filtering.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\FlateDecode.cs">
+      <Link>PdfSharp.Pdf.Filters\FlateDecode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Filters\LzwDecode.cs">
+      <Link>PdfSharp.Pdf.Filters\LzwDecode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\AnsiEncoding.cs">
+      <Link>PdfSharp.Pdf.Internal\AnsiEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\ColorSpaceHelper.cs">
+      <Link>PdfSharp.Pdf.Internal\ColorSpaceHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\DocEncoding.cs">
+      <Link>PdfSharp.Pdf.Internal\DocEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\GlobalObjectTable.cs">
+      <Link>PdfSharp.Pdf.Internal\GlobalObjectTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\PdfEncoders.cs">
+      <Link>PdfSharp.Pdf.Internal\PdfEncoders.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\RawEncoding.cs">
+      <Link>PdfSharp.Pdf.Internal\RawEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\RawUnicodeEncoding.cs">
+      <Link>PdfSharp.Pdf.Internal\RawUnicodeEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Internal\ThreadLocalStorage.cs">
+      <Link>PdfSharp.Pdf.Internal\ThreadLocalStorage.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\Chars.cs">
+      <Link>PdfSharp.Pdf.IO\Chars.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\enums\PasswordValidity.cs">
+      <Link>PdfSharp.Pdf.IO\enums\PasswordValidity.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\enums\PdfDocumentOpenMode.cs">
+      <Link>PdfSharp.Pdf.IO\enums\PdfDocumentOpenMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\enums\PdfWriterLayout.cs">
+      <Link>PdfSharp.Pdf.IO\enums\PdfWriterLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\enums\PdfWriterOptions.cs">
+      <Link>PdfSharp.Pdf.IO\enums\PdfWriterOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\enums\Symbol.cs">
+      <Link>PdfSharp.Pdf.IO\enums\Symbol.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\Lexer.cs">
+      <Link>PdfSharp.Pdf.IO\Lexer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\Parser.cs">
+      <Link>PdfSharp.Pdf.IO\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\PdfReader.cs">
+      <Link>PdfSharp.Pdf.IO\PdfReader.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\PdfReaderException.cs">
+      <Link>PdfSharp.Pdf.IO\PdfReaderException.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\PdfWriter.cs">
+      <Link>PdfSharp.Pdf.IO\PdfWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.IO\ShiftStack.cs">
+      <Link>PdfSharp.Pdf.IO\ShiftStack.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Security\enums\PdfDocumentSecurity.cs">
+      <Link>PdfSharp.Pdf.Security\enums\PdfDocumentSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Security\enums\PdfUserAccessPermission.cs">
+      <Link>PdfSharp.Pdf.Security\enums\PdfUserAccessPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Security\PdfSecurityHandler.cs">
+      <Link>PdfSharp.Pdf.Security\PdfSecurityHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Security\PdfSecuritySettings.cs">
+      <Link>PdfSharp.Pdf.Security\PdfSecuritySettings.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Security\PdfStandardSecurityHandler.cs">
+      <Link>PdfSharp.Pdf.Security\PdfStandardSecurityHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\EntryInfoAttribute.cs">
+      <Link>PdfSharp.Pdf\EntryInfoAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\DocumentState.cs">
+      <Link>PdfSharp.Pdf\enums\DocumentState.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfColorMode.cs">
+      <Link>PdfSharp.Pdf\enums\PdfColorMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfCustomValueCompression.cs">
+      <Link>PdfSharp.Pdf\enums\PdfCustomValueCompression.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfFontEmbedding.cs">
+      <Link>PdfSharp.Pdf\enums\PdfFontEmbedding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfFontEncoding.cs">
+      <Link>PdfSharp.Pdf\enums\PdfFontEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfOutlineStyle.cs">
+      <Link>PdfSharp.Pdf\enums\PdfOutlineStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfPageLayout.cs">
+      <Link>PdfSharp.Pdf\enums\PdfPageLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfPageMode.cs">
+      <Link>PdfSharp.Pdf\enums\PdfPageMode.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfReadingDirection.cs">
+      <Link>PdfSharp.Pdf\enums\PdfReadingDirection.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\enums\PdfTextStringEncoding.cs">
+      <Link>PdfSharp.Pdf\enums\PdfTextStringEncoding.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\KeysBase.cs">
+      <Link>PdfSharp.Pdf\KeysBase.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\KeysMeta.cs">
+      <Link>PdfSharp.Pdf\KeysMeta.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfArray.cs">
+      <Link>PdfSharp.Pdf\PdfArray.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfBoolean.cs">
+      <Link>PdfSharp.Pdf\PdfBoolean.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfBooleanObject.cs">
+      <Link>PdfSharp.Pdf\PdfBooleanObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfCustomValue.cs">
+      <Link>PdfSharp.Pdf\PdfCustomValue.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfCustomValues.cs">
+      <Link>PdfSharp.Pdf\PdfCustomValues.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDate.cs">
+      <Link>PdfSharp.Pdf\PdfDate.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDictionary.cs">
+      <Link>PdfSharp.Pdf\PdfDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDocument.cs">
+      <Link>PdfSharp.Pdf\PdfDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDocumentInformation.cs">
+      <Link>PdfSharp.Pdf\PdfDocumentInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDocumentOptions.cs">
+      <Link>PdfSharp.Pdf\PdfDocumentOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfDocumentSettings.cs">
+      <Link>PdfSharp.Pdf\PdfDocumentSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfInteger.cs">
+      <Link>PdfSharp.Pdf\PdfInteger.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfIntegerObject.cs">
+      <Link>PdfSharp.Pdf\PdfIntegerObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfItem.cs">
+      <Link>PdfSharp.Pdf\PdfItem.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfLiteral.cs">
+      <Link>PdfSharp.Pdf\PdfLiteral.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfName.cs">
+      <Link>PdfSharp.Pdf\PdfName.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfNameObject.cs">
+      <Link>PdfSharp.Pdf\PdfNameObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfNull.cs">
+      <Link>PdfSharp.Pdf\PdfNull.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfNullObject.cs">
+      <Link>PdfSharp.Pdf\PdfNullObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfNumber.cs">
+      <Link>PdfSharp.Pdf\PdfNumber.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfNumberObject.cs">
+      <Link>PdfSharp.Pdf\PdfNumberObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfObject.cs">
+      <Link>PdfSharp.Pdf\PdfObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfObjectID.cs">
+      <Link>PdfSharp.Pdf\PdfObjectID.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfOutline.cs">
+      <Link>PdfSharp.Pdf\PdfOutline.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfPage.cs">
+      <Link>PdfSharp.Pdf\PdfPage.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfPages.cs">
+      <Link>PdfSharp.Pdf\PdfPages.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfReal.cs">
+      <Link>PdfSharp.Pdf\PdfReal.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfRealObject.cs">
+      <Link>PdfSharp.Pdf\PdfRealObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfRectangle.cs">
+      <Link>PdfSharp.Pdf\PdfRectangle.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfReferenceTable.cs">
+      <Link>PdfSharp.Pdf\PdfReferenceTable.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfString.cs">
+      <Link>PdfSharp.Pdf\PdfString.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfStringObject.cs">
+      <Link>PdfSharp.Pdf\PdfStringObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfUInteger.cs">
+      <Link>PdfSharp.Pdf\PdfUInteger.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfUIntegerObject.cs">
+      <Link>PdfSharp.Pdf\PdfUIntegerObject.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\PdfViewerPreferences.cs">
+      <Link>PdfSharp.Pdf\PdfViewerPreferences.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf\TrimMargins.cs">
+      <Link>PdfSharp.Pdf\TrimMargins.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Checksums\Adler32.cs">
+      <Link>PdfSharp.SharpZipLib\Checksums\Adler32.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Checksums\CRC32.cs">
+      <Link>PdfSharp.SharpZipLib\Checksums\CRC32.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Checksums\IChecksum.cs">
+      <Link>PdfSharp.SharpZipLib\Checksums\IChecksum.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\SharpZip\SharpZipBaseException.cs">
+      <Link>PdfSharp.SharpZipLib\SharpZip\SharpZipBaseException.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Deflater.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Deflater.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\DeflaterConstants.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\DeflaterConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\DeflaterEngine.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\DeflaterEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\DeflaterHuffman.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\DeflaterHuffman.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\DeflaterPending.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\DeflaterPending.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Inflater.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Inflater.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\InflaterDynHeader.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\InflaterDynHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\PendingBuffer.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\PendingBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Streams\OutputWindow.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Streams\OutputWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs">
+      <Link>PdfSharp.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\enums\PageOrientation.cs">
+      <Link>PdfSharp\enums\PageOrientation.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\enums\PageSize.cs">
+      <Link>PdfSharp\enums\PageSize.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\enums\PSMsgID.cs">
+      <Link>PdfSharp\enums\PSMsgID.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\PageSizeConverter.cs">
+      <Link>PdfSharp\PageSizeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\PdfSharpException.cs">
+      <Link>PdfSharp\PdfSharpException.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\ProductVersionInfo.cs">
+      <Link>PdfSharp\ProductVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\PSSR.cs">
+      <Link>PdfSharp\PSSR.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp\VersionInfo.cs">
+      <Link>PdfSharp\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\PdfSharp\!internal\Directives.cs">
+      <Link>!internal\Directives.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\enums\FontTechnology.cs">
+      <Link>PdfSharp.Fonts.OpenType\enums\FontTechnology.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\enums\TableTagNames.cs">
+      <Link>PdfSharp.Fonts.OpenType\enums\TableTagNames.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Fonts.OpenType\enums\TableTag.cs">
+      <Link>PdfSharp.Fonts.OpenType\enums\TableTag.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\enums\PdfAcroFieldFlags.cs">
+      <Link>PdfSharp.Pdf.AcroForms\enums\PdfAcroFieldFlags.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfAcroField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfAcroField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfAcroForm.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfAcroForm.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfButtonField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfButtonField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfCheckBoxField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfCheckBoxField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfChoiceField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfChoiceField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfComboBoxField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfComboBoxField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfGenericField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfGenericField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfListBoxField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfListBoxField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfPushButtonField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfPushButtonField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfRadioButtonField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfRadioButtonField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfSignatureField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfSignatureField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.AcroForms\PdfTextField.cs">
+      <Link>PdfSharp.Pdf.AcroForms\PdfTextField.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content.Objects\CObjects.cs">
+      <Link>PdfSharp.Pdf.Content.Objects\CObjects.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content.Objects\enum\OpCodeName.cs">
+      <Link>PdfSharp.Pdf.Content.Objects\enum\OpCodeName.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content.Objects\enum\OpCodeFlags.cs">
+      <Link>PdfSharp.Pdf.Content.Objects\enum\OpCodeFlags.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content.Objects\Operators.cs">
+      <Link>PdfSharp.Pdf.Content.Objects\Operators.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\Chars.cs">
+      <Link>PdfSharp.Pdf.Content\Chars.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\CLexer.cs">
+      <Link>PdfSharp.Pdf.Content\CLexer.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\ContentReader.cs">
+      <Link>PdfSharp.Pdf.Content\ContentReader.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\ContentReaderException.cs">
+      <Link>PdfSharp.Pdf.Content\ContentReaderException.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\CParser.cs">
+      <Link>PdfSharp.Pdf.Content\CParser.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\enums\Symbol.cs">
+      <Link>PdfSharp.Pdf.Content\enums\Symbol.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Actions\enums\PdfNamedActionNames.cs">
+      <Link>PdfSharp.Pdf.Actions\enums\PdfNamedActionNames.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Actions\PdfAction.cs">
+      <Link>PdfSharp.Pdf.Actions\PdfAction.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\enums\PdfAnnotationFlags.cs">
+      <Link>PdfSharp.Pdf.Annotations\enums\PdfAnnotationFlags.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\enums\PdfRubberStampAnnotationIcon.cs">
+      <Link>PdfSharp.Pdf.Annotations\enums\PdfRubberStampAnnotationIcon.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Annotations\enums\PdfTextAnnotationIcon.cs">
+      <Link>PdfSharp.Pdf.Annotations\enums\PdfTextAnnotationIcon.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Content\ContentWriter.cs">
+      <Link>PdfSharp.Pdf.Content\ContentWriter.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\PdfSharp.Pdf.Printing\PdfFilePrinter.cs">
+      <Link>PdfSharp.Pdf.Printing\PdfFilePrinter.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="..\PdfSharp\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+</Project>
