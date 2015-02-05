@@ -456,7 +456,7 @@ namespace PdfSharp.Pdf.Internal
     }
 
     /// <summary>
-    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps € and some other characters.
+    /// Converts WinAnsi to DocEncode characters. Incomplete, just maps ï¿½ and some other characters.
     /// </summary>
     static byte[] docencode_______ = new byte[256]
     {

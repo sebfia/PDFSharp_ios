@@ -54,7 +54,7 @@ namespace PdfSharp.Pdf
     { }
 
     /// <summary>
-    /// Gets or sets a value indicating whether to hide the viewer application’s tool
+    /// Gets or sets a value indicating whether to hide the viewer applicationï¿½s tool
     ///  bars when the document is active.
     /// </summary>
     public bool HideToolbar
@@ -64,7 +64,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Gets or sets a value indicating whether to hide the viewer application’s
+    /// Gets or sets a value indicating whether to hide the viewer applicationï¿½s
     /// menu bar when the document is active.
     /// </summary>
     public bool HideMenubar
@@ -75,8 +75,8 @@ namespace PdfSharp.Pdf
 
     /// <summary>
     /// Gets or sets a value indicating whether to hide user interface elements in
-    /// the document’s window (such as scroll bars and navigation controls),
-    /// leaving only the document’s contents displayed.
+    /// the documentï¿½s window (such as scroll bars and navigation controls),
+    /// leaving only the documentï¿½s contents displayed.
     /// </summary>
     public bool HideWindowUI
     {
@@ -85,7 +85,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Gets or sets a value indicating whether to resize the document’s window to
+    /// Gets or sets a value indicating whether to resize the documentï¿½s window to
     /// fit the size of the first displayed page.
     /// </summary>
     public bool FitWindow
@@ -95,7 +95,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Gets or sets a value indicating whether to position the document’s window
+    /// Gets or sets a value indicating whether to position the documentï¿½s window
     /// in the center of the screen.
     /// </summary>
     public bool CenterWindow
@@ -105,7 +105,7 @@ namespace PdfSharp.Pdf
     }
 
     /// <summary>
-    /// Gets or sets a value indicating whether the window’s title bar
+    /// Gets or sets a value indicating whether the windowï¿½s title bar
     /// should display the document title taken from the Title entry of the document
     /// information dictionary. If false, the title bar should instead display the name
     /// of the PDF file containing the document.
@@ -119,7 +119,7 @@ namespace PdfSharp.Pdf
     /// <summary>
     /// The predominant reading order for text: LeftToRight or RightToLeft 
     /// (including vertical writing systems, such as Chinese, Japanese, and Korean).
-    /// This entry has no direct effect on the document’s contents or page numbering
+    /// This entry has no direct effect on the documentï¿½s contents or page numbering
     /// but can be used to determine the relative positioning of pages when displayed 
     /// side by side or printed n-up. Default value: LeftToRight.
     /// </summary>
@@ -163,14 +163,14 @@ namespace PdfSharp.Pdf
     internal sealed class Keys : KeysBase
     {
       /// <summary>
-      /// (Optional) A flag specifying whether to hide the viewer application’s tool
+      /// (Optional) A flag specifying whether to hide the viewer applicationï¿½s tool
       ///  bars when the document is active. Default value: false.
       /// </summary>
       [KeyInfo(KeyType.Boolean | KeyType.Optional)]
       public const string HideToolbar = "/HideToolbar";
 
       /// <summary>
-      /// (Optional) A flag specifying whether to hide the viewer application’s
+      /// (Optional) A flag specifying whether to hide the viewer applicationï¿½s
       /// menu bar when the document is active. Default value: false.
       /// </summary>
       [KeyInfo(KeyType.Boolean | KeyType.Optional)]
@@ -178,28 +178,28 @@ namespace PdfSharp.Pdf
 
       /// <summary>
       /// (Optional) A flag specifying whether to hide user interface elements in
-      ///  the document’s window (such as scroll bars and navigation controls),
-      ///  leaving only the document’s contents displayed. Default value: false.
+      ///  the documentï¿½s window (such as scroll bars and navigation controls),
+      ///  leaving only the documentï¿½s contents displayed. Default value: false.
       /// </summary>
       [KeyInfo(KeyType.Boolean | KeyType.Optional)]
       public const string HideWindowUI = "/HideWindowUI";
 
       /// <summary>
-      /// (Optional) A flag specifying whether to resize the document’s window to
+      /// (Optional) A flag specifying whether to resize the documentï¿½s window to
       /// fit the size of the first displayed page. Default value: false.
       /// </summary>
       [KeyInfo(KeyType.Boolean | KeyType.Optional)]
       public const string FitWindow = "/FitWindow";
 
       /// <summary>
-      /// (Optional) A flag specifying whether to position the document’s window
+      /// (Optional) A flag specifying whether to position the documentï¿½s window
       /// in the center of the screen. Default value: false.
       /// </summary>
       [KeyInfo(KeyType.Boolean | KeyType.Optional)]
       public const string CenterWindow = "/CenterWindow";
 
       /// <summary>
-      /// (Optional; PDF 1.4) A flag specifying whether the window’s title bar
+      /// (Optional; PDF 1.4) A flag specifying whether the windowï¿½s title bar
       /// should display the document title taken from the Title entry of the document
       /// information dictionary. If false, the title bar should instead display the name
       /// of the PDF file containing the document. Default value: false.
@@ -208,7 +208,7 @@ namespace PdfSharp.Pdf
       public const string DisplayDocTitle = "/DisplayDocTitle";
 
       /// <summary>
-      /// (Optional) The document’s page mode, specifying how to display the document on 
+      /// (Optional) The documentï¿½s page mode, specifying how to display the document on 
       /// exiting full-screen mode:
       ///   UseNone     Neither document outline nor thumbnail images visible
       ///   UseOutlines Document outline visible
@@ -224,7 +224,7 @@ namespace PdfSharp.Pdf
       /// (Optional; PDF 1.3) The predominant reading order for text:
       ///   L2R  Left to right
       ///   R2L  Right to left (including vertical writing systems, such as Chinese, Japanese, and Korean)
-      /// This entry has no direct effect on the document’s contents or page numbering
+      /// This entry has no direct effect on the documentï¿½s contents or page numbering
       /// but can be used to determine the relative positioning of pages when displayed 
       /// side by side or printed n-up. Default value: L2R.
       /// </summary>
@@ -238,7 +238,7 @@ namespace PdfSharp.Pdf
       /// boundary is not defined in the page object, its default value is used.
       /// Default value: CropBox.
       /// Note: This entry is intended primarily for use by prepress applications that
-      /// interpret or manipulate the page boundaries as described in Section 10.10.1, “Page Boundaries.”
+      /// interpret or manipulate the page boundaries as described in Section 10.10.1, ï¿½Page Boundaries.ï¿½
       /// Most PDF consumer applications disregard it.
       /// </summary>
       [KeyInfo(KeyType.Name | KeyType.Optional)]
@@ -251,7 +251,7 @@ namespace PdfSharp.Pdf
       /// boundary is not defined in the page object, its default value is used.
       /// Default value: CropBox.
       /// Note: This entry is intended primarily for use by prepress applications that
-      /// interpret or manipulate the page boundaries as described in Section 10.10.1, “Page Boundaries.”
+      /// interpret or manipulate the page boundaries as described in Section 10.10.1, ï¿½Page Boundaries.ï¿½
       /// Most PDF consumer applications disregard it.
       /// </summary>
       [KeyInfo(KeyType.Name | KeyType.Optional)]
@@ -264,7 +264,7 @@ namespace PdfSharp.Pdf
       /// defined in the page object, its default value is used.
       /// Default value: CropBox.
       /// Note: This entry is intended primarily for use by prepress applications that
-      /// interpret or manipulate the page boundaries as described in Section 10.10.1, “Page Boundaries.”
+      /// interpret or manipulate the page boundaries as described in Section 10.10.1, ï¿½Page Boundaries.ï¿½
       /// Most PDF consumer applications disregard it.
       /// </summary>
       [KeyInfo(KeyType.Name | KeyType.Optional)]

@@ -83,7 +83,7 @@ namespace PdfSharp
     /// <summary>
     /// The copyright information. Also used as NuGet Copyright.
     /// </summary>
-    public const string Copyright = "Copyright © 2005-2012 empira Software GmbH.";
+    public const string Copyright = "Copyright ï¿½ 2005-2012 empira Software GmbH.";
 
     /// <summary>
     /// The trademark the product.

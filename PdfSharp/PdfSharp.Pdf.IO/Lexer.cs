@@ -175,7 +175,7 @@ namespace PdfSharp.Pdf.IO
     public byte[] ReadStream(int length)
     {
       int pos = 0;
-      // Skip new line behind «stream»
+      // Skip new line behind ï¿½streamï¿½
       if (this.currChar == Chars.CR)
       {
         if (this.nextChar == Chars.LF)
@@ -371,7 +371,7 @@ namespace PdfSharp.Pdf.IO
         // ? What about \# escape sequences
 
         // BUG: The code is not correct. I got a file containing the following sting:
-        // (þÿñùãfØÚ\rÞF`:7.2.5 Acceptable daily intake \(ADI\) and other guideline levels)
+        // (ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½ï¿½\rï¿½F`:7.2.5 Acceptable daily intake \(ADI\) and other guideline levels)
         // It starts as unicode but ends as Ascii. No idea how to parse.
 #if true
         //List<byte> bytes = new List<byte>();

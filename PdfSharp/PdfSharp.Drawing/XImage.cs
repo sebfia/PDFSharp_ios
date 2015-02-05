@@ -44,8 +44,8 @@ using System.Windows.Media.Imaging;
 #endif
 
 #if __IOS__
-using MonoTouch.UIKit;
-using MonoTouch.Foundation;
+using UIKit;
+using Foundation;
 #endif
 using PdfSharp;
 using PdfSharp.Internal;

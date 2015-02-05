@@ -38,7 +38,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Media;
 #endif
 #if __IOS__
-using MonoTouch.UIKit;
+using UIKit;
 #endif
 using PdfSharp.Pdf;
 using PdfSharp.Fonts.OpenType;

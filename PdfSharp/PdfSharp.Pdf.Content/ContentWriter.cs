@@ -411,7 +411,7 @@ namespace PdfSharp.Pdf.Content
         WriteRaw(" >>\nstream\n");
 
       if (omitStream)
-        WriteRaw("  «...stream content omitted...»\n");  // useful for debugging only
+        WriteRaw("  ï¿½...stream content omitted...ï¿½\n");  // useful for debugging only
       else
       {
         byte[] bytes = value.Stream.Value;
